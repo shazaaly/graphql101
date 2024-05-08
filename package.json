@@ -1,0 +1,17 @@
+{
+  "name": "graphql101",
+  "version": "1.0.0",
+  "description": "Welcome to the GraphQL tutorial! This tutorial is designed to introduce you to the basics of GraphQL, including what it is, how it compares to REST, and how to get started with building your own GraphQL API.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.8.1",
+    "nodemon": "^3.1.0"
+  }
+}
