@@ -6,6 +6,11 @@ const resolvers = {
 
             return UserList
 
+        },
+        user(_, args){
+            const user =  UserList.find(user=> user.id === Number(args.id))
+            return user
+
         }
     }
 
