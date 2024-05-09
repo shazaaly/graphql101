@@ -47,6 +47,14 @@ const resolvers = {
       user.username = newName;
       return user;
     },
+    deleteUser(_, args) {
+      const user = UserList.find((user) => user.id === Number(args.id));
+      if (!user) {
+        throw new Error(`User with id ${args.id} not found`);
+      }
+      UserList.filter((user) => user.id !== Number(args.id));
+      return user;
+    },
   },
 };
 module.exports = { resolvers };
