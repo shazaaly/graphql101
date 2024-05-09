@@ -1,4 +1,4 @@
-const {UserList} = require('../fakeData');
+const {UserList, MovieList} = require('../fakeData');
 
 const resolvers = {
     Query: {
@@ -10,6 +10,19 @@ const resolvers = {
         user(_, args){
             const user =  UserList.find(user=> user.id === Number(args.id))
             return user
+
+        },
+        userFavourateMovies(){
+
+        },
+
+        movies(){
+            return MovieList
+        },
+
+        movie(_, args){
+            const movie = MovieList.find(movie => movie.name === args.name)
+            return movie
 
         }
     }
